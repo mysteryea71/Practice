@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TypeScript Calculator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('https://media.tenor.com/Hnp_rv3Zpw8AAAAd/thinking-calculations.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+        }
+
+        label {
+            color: white;
+        }
+
+        input[type="number"] {
+            width: 200px;
+            padding: 10px;
+            font-size: 18px;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            outline: none;
+            text-align: center;
+        }
+
+        #number-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #button-container {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        p#result {
+            font-size: 18px;
+            text-align: center;
+            color: white;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple TypeScript Webpage</h1>
+
+    <div id="number-container">
+        <label for="number1">Number 1:</label>
+        <input type="number" id="number1" placeholder="Enter a number">
+    
+        <label for="number2">Number 2:</label>
+        <input type="number" id="number2" placeholder="Enter another number">
+    </div>
+    
+    <div id="button-container">
+        <button id="addButton">Add</button>
+        <button id="subtractButton">Subtract</button>
+    </div>
+
+    <p id="result">Result: </p>
+    <script type="module">
+        document.addEventListener("DOMContentLoaded", () => {
+            const addButton = document.getElementById('addButton');
+            const subtractButton = document.getElementById('subtractButton');
+            const resultElement = document.getElementById('result');
+
+            addButton.addEventListener('click', () => {
+                const number1 = parseFloat(document.getElementById('number1').value);
+                const number2 = parseFloat(document.getElementById('number2').value);
+                
+                const result = number1 + number2;
+                
+                resultElement.innerText = `Result: ${result}`;
+            });
+
+            subtractButton.addEventListener('click', () => {
+                const number1 = parseFloat(document.getElementById('number1').value);
+                const number2 = parseFloat(document.getElementById('number2').value);
+                
+                const result = number1 - number2;
+                
+                resultElement.innerText = `Result: ${result}`;
+            });
+        });
+    </script>
+</body>
+</html>
