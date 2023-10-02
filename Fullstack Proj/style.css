@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fafaf9;
+  background-color: #292524;
+  text-transform: uppercase;
+  font-family: "Sono";
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.fact-form {
+  background-color: #44403c;
+}
+
+h1 {
+  font-size: 42px;
+  text-transform: uppercase;
+  font-family: "Coiny";
+}
+
+.fact {
+  font-size: 20px;
+  line-height: 1.4;
+  background-color: #44403c;
+  margin-bottom: 16px;
+}
+
+.tag {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "Coiny";
+}
+
+ul {
+  list-style: none;
+}
